@@ -1,7 +1,7 @@
 const fs = require('fs');
 
-function FileListPlugin(options) {}
-FileListPlugin.prototype.apply = function (compiler) {
+function addUI(options) {}
+addUI.prototype.apply = function (compiler) {
   compiler.plugin('emit', function (compilation, callback) {
     fs.readFile(__dirname + "/app/index.js", 'utf8', (err, data) => {
       if (err) throw err;
@@ -15,4 +15,4 @@ FileListPlugin.prototype.apply = function (compiler) {
     });
   });
 };
-module.exports = FileListPlugin;
+module.exports = addUI;

@@ -1,5 +1,5 @@
 
-var HelloWorldPlugin = require('./FileListPlugin');
+var addUI = require('./addUI');
 
 module.exports = {
   entry:  __dirname + "/app/index.js",//已多次提及的唯一入口文件
@@ -8,6 +8,6 @@ module.exports = {
     filename: "bundle.js"//打包后输出文件的文件名
   },
   plugins: [
-    new HelloWorldPlugin({options: true})
+    new addUI({options: true})
   ]
 }
