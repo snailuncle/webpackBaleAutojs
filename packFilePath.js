@@ -1,0 +1,1 @@
+D:/webpackBaleAutojs/app/index.js
