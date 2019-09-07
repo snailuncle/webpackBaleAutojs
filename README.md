@@ -2,7 +2,6 @@
 ## 必备条件
 1. webpack基于nodejs,电脑上必须安装nodejs.
 ## 注意事项
-1. 由于我不会在webpack插件中查找webpack.config.js的entry和output, 所以我就把入口文件和出口文件写死了.
 2. 入口文件: packFilePath.js 这个里面放 入口文件 绝对路径, 如:   D:/webpackBaleAutojs/app/index.js
 3. 出口文件: __dirname + "/public/bundle.js"
 ## 操作步骤
