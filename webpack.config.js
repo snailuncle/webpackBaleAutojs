@@ -1,11 +1,11 @@
-// console.log = () => {};
-console.log('111111111111111111111111111')
+
 const fs = require("fs");
-console.log('2222222222222222222222222')
 const path = require("path");
-console.log('3333333333333333333333')
 const config = require("./config");
-console.log('444444444444444444')
+
+if(!config.log){
+  console.log=function(){}
+}
 
 var addUI = require("./addUI");
 var entryFile = config.entry

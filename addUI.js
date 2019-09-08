@@ -2,6 +2,9 @@ const fs = require("fs");
 const path = require("path");
 const config = require("./config");
 
+if(!config.log){
+  console.log=function(){}
+}
 var entryFile = config.entry;
 
 function addUI() {}
