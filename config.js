@@ -1,9 +1,9 @@
 const path = require("path");
-
+console.log('__dirname: '+__dirname)
 var config = {
-  entry: path.join(__dirname, "app", "index.js"),
+  entry: path.resolve('.', "app", "index.js"),
   base64: false,
-  log: false
+  log: true
 };
 
 module.exports = config;

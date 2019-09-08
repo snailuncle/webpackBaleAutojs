@@ -1,14 +1,13 @@
-
 const fs = require("fs");
 const path = require("path");
 const config = require("./config");
 
-if(!config.log){
-  console.log=function(){}
+if (!config.log) {
+  console.log = function() {};
 }
 
 var addUI = require("./addUI");
-var entryFile = config.entry
+var entryFile = config.entry;
 console.log("webpack entryFile = " + entryFile);
 
 var indexContent = fs.readFileSync(entryFile, "utf8");
@@ -51,10 +50,10 @@ console.log("ui界面写入完毕");
 fs.writeFileSync(entryFile, indexContent);
 console.log("index.js重写完毕");
 
-module.exports = {
+var result = {
   entry: entryFile, //已多次提及的唯一入口文件
   output: {
-    path: __dirname + "/public", //打包后的文件存放的地方
+    path: path.resolve(".", "public"),
     filename: "bundle.js" //打包后输出文件的文件名
   },
   plugins: [new addUI({ options: true })],
@@ -69,3 +68,6 @@ module.exports = {
     ]
   }
 };
+console.log("webpack.config:");
+console.log(result);
+module.exports = result;
