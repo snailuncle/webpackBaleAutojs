@@ -1,4 +1,5 @@
 # webpack 打包 autojs
+# 功能: 用于将autojs开发的模块化脚本, 多个js文件, 打包为一个js文件
 
 ## 必备条件
 
@@ -6,7 +7,7 @@
 
 ## 注意事项
 
-2. 入口文件: packFilePath.js 这个里面放 入口文件 绝对路径, 如: D:/webpackBaleAutojs/app/index.js
+2. 入口文件: packFilePath.txt 这个里面放 入口文件 绝对路径, 如: D:\webpackBaleAutojs\app\index.js
 3. 出口文件: \_\_dirname + "/public/bundle.js"
 
 ## 操作步骤
@@ -16,16 +17,11 @@
 3. 以下指令均在 cmd 执行,记得 cd 到项目所在目录
 4. npm install
 5. webpack
-6. 执行完以上命令,你就会看到 public 文件夹下多了一个 bundle.js 文件,它可以在 autojs 中正常执行.
+6. 执行完以上命令, public 文件夹下生成一个 bundle.js 文件,它可以在 autojs 中正常执行.
 
-## 备注:
+## 备注 
 
-之所以写这个打包, 是因为我想把文件合并成一个文件, 这样上传下载脚本都容易的多,一个脚本文件就好.
-
-## 备注 2
-
-ui 的话, 所有 ui 界面代码都写到 layout.xml 中,
-如果入口文件的第一行是"ui",那么 webpack 就会在打包后, 在第一行添加"ui", 否则就不加.
+如果有ui, 就在ui.layout()后面加个;, 因为是通过正则来提取ui的, 正则是: /ui\.layout\(|\);/
 
 <div align=center>
 <img width="300" height="300" src="https://raw.githubusercontent.com/snailuncle/autojsDemo/master/111111111%E6%9F%B4%E6%88%BF/yeah.png"/>

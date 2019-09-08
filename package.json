@@ -1,21 +1,22 @@
 {
-  "name": "webpackbaleautojs",
+  "name": "workmodule",
   "version": "1.0.0",
   "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack --mode development",
     "build": "webpack --mode production"
   },
-  "main": "index.js",
-  "dependencies": {
-    "@babel/core": "^7.5.5",
-    "babel-loader": "^8.0.6"
-  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
   "devDependencies": {
     "webpack": "^4.39.3",
-    "xml-loader": "^1.2.1"
-  },
-  "author": "",
-  "license": "ISC"
+    "@babel/core": "^7.5.5",
+    "babel-loader": "^8.0.6"
+  }
 }
