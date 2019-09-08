@@ -1,8 +1,9 @@
 const fs = require("fs");
 const path = require("path");
+const config = require("./config");
 
-var entryFilePath = path.join(__dirname, "packFilePath.txt").replace("\\", "/");
-var entryFile = fs.readFileSync(entryFilePath, "utf8");
+var entryFile = config.entry;
+
 function addUI() {}
 addUI.prototype.apply = function(compiler) {
   compiler.plugin("emit", function(compilation, callback) {
@@ -51,6 +52,12 @@ addUI.prototype.apply = function(compiler) {
         });
       } else {
         console.log('不包含"ui"');
+      }
+      if (config.base64) {
+        var value = compilation.assets["bundle.js"]._value;
+        compilation.assets["bundle.js"]._value = new Buffer(value).toString(
+          "base64"
+        );
       }
       callback();
     });

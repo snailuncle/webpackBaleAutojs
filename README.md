@@ -7,7 +7,7 @@
 
 ## 注意事项
 
-2. 入口文件: packFilePath.txt 这个里面放 入口文件 绝对路径, 如: D:\webpackBaleAutojs\app\index.js
+2. 入口文件: 在配置文件中修改, config.entry 是入口文件, config.base64 布尔值 是否对最终脚本base64
 3. 出口文件: \_\_dirname + "/public/bundle.js"
 
 ## 操作步骤
