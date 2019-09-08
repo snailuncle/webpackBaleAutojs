@@ -21,7 +21,7 @@
 
 ## 备注 
 
-如果有ui, 就在ui.layout()后面加个;, 因为是通过正则来提取ui的, 正则是: /ui\.layout\(|\);/
+如果有ui, 就在ui.layout()后面加个;, 因为是通过正则来提取ui的, 正则是: /ui\\.layout\\(|\\);/
 
 <div align=center>
 <img width="300" height="300" src="https://raw.githubusercontent.com/snailuncle/autojsDemo/master/111111111%E6%9F%B4%E6%88%BF/yeah.png"/>
