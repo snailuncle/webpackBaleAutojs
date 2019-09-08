@@ -58,7 +58,7 @@ module.exports = {
     filename: "bundle.js" //打包后输出文件的文件名
   },
   plugins: [new addUI({ options: true })],
-  mode: "production",
+  mode: "production", // production  development
   module: {
     rules: [
       //添加 xml-loader
