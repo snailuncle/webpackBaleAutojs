@@ -1,3 +1,8 @@
+此仓库已弃用
+请使用新仓库
+[webpack-autojs](https://github.com/snailuncle/webpack-autojs/)
+
+
 # webpack 打包 autojs
 # 功能: 用于将autojs开发的模块化脚本, 多个js文件, 打包为一个js文件
 
